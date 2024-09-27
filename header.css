@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.header{
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    padding: 2rem 5rem 5px 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1px solid #F6F6F6;
+    position: fixed;
+    background-color: #ffffff;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.exclusive{
+    color: black;
+    font-size: 24px;
+    font-weight:700;
+}
+
+.sections{
+    width: fit-content;
+    height: auto;
+}
+
+.sections ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+    list-style: none;    
+}
+
+.sections ul li a{
+    color:black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.sections ul li a:hover{
+    font-size: 18px;
+}
+
+.sections ul li a::after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #DB4444;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.sections ul li a:hover::after{
+   width: 100%;
+}
+
+
+
+
+
+.search-cart-wish{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.2rem;
+}
+
+.search-bar{
+    width: fit-content;
+    height: auto;
+    display: flex;
+}
+
+.search-bar input{
+    border: none;
+    background-color: #F5F5F5;
+    color: rgba(0, 0, 0, 1);
+    padding: 3px 2rem 3px 1rem;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.search-img{
+    width: 30px;
+    height: 35px;
+    background-color:#F5F5F5;
+    border: none;
+}
+
+.search-img:hover{
+    cursor: pointer;
+}
+
+.search-img img{
+    margin-top: 7px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.wishlist,.cart{
+    width: fit-content;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.wishlist-img,.cart-img{
+    width: fit-content;
+    height: auto;
+}
+
+.wishlist-img img,.cart-img img{
+    margin-top: 7px;
+    max-width: 100%;
+    max-height: 100%;
+
+    
+}
+
+.wishlist-num{
+    width: 20px;
+    height: auto;
+    clip-path: circle();
+    background-color: #DB4444;
+    position: absolute;
+    top: 1.5px;
+    right: -5px;
+}
+
+.cart-num{
+    width: 20px;
+    height: auto;
+    clip-path: circle();
+    background-color: #DB4444;
+    position: absolute;
+    top: 1.5px;
+    right: -5px;
+}
+
+.wishlist-num p,.cart-num p{
+    font-size: 10px;
+    color: white;
+    text-align: center;
+}
+.my-account{
+    
+    height: auto;
+    position: relative;
+}
+.my-account-icon{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-account-icon img{
+    width: 25px;
+    height: 30px;
+ 
+}
+.my-account-display-prop{
+    clip-path: circle();
+    background-color: #DB4444;
+}
+.account-section-on-click{
+    position: absolute;
+    height: 250px;
+    backdrop-filter: blur(10px);
+    left: -180px;
+    border-radius: 4px;
+    padding: 18px 12px 10px 12px;
+    display: none;
+}
+
+.account-section{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    row-gap: 13px;
+}
+
+.account-section li{
+    width: 100%;
+    list-style: none;
+    
+}
+
+.account-section li:hover{
+    background-color: #aca9a9;
+}
+
+
+
+.account-section li a{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    justify-content: start;
+}
+
+.account-section li a div {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-section li a div img{
+    width: 70%;
+    height: 70%;
+
+}
+.my-account{
+    width: fit-content;
+    height: auto;
+}
+/* .my-account-icon:hover + .account-section-on-click{
+    display: block;
+} */
+
+
+
+
+.hamburger,.hamburger-close {
+    display: none;
+    width: 40px;
+    
+}
+
+
+.harmburger-sec{
+    width: 230px;
+    height: 100%;
+    position: absolute;
+    top:40px;
+    left: 0;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+    padding-top: 2rem;
+    z-index: 999;
+    display: none;
+}
+.harmburger-sec ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.harmburger-sec ul li{
+   font-size: 14px;
+   padding: 16px 8px;
+    
+
+}
+.harmburger-sec ul li:hover{
+    background-color: #aca9a9;
+    
+}
+ 
+.harmburger-sec ul li a{
+    text-decoration: none;
+}
+.my-account-dropdown,.my-category-dropdown{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+   
+}
+
+.my-account-dropdown-header a,.my-category-dropdown-header a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.my-account-dropdown-child,.my-category-dropdown-child{
+    margin-top: 16px;
+    padding-left: 16px;
+    background-color: #F5F5F5;
+}
+
+
+
+
+.inner-dropdown,.categories-inner-dropdown{
+    display: none;
+}
+.my-account-dropdown-header:hover + .my-account-dropdown-child li{
+    display: flex;
+}
+
+.my-category-dropdown-header:hover + .my-category-dropdown-child li{
+    display: flex;
+}
+
+
+.my-category-dropdown-child li:hover{
+    background-color: #ffffff;
+    
+ }
+
+.side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    position: relative;
+}
+
+@media screen and (max-width:1200px){
+    .sections,.my-account{
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        align-items: center;
+    justify-content: center;
+    }
+
+    .header{
+        padding: 2rem 2rem 5px 2rem;
+    }
+}
+
+@media screen and (max-width:768px){
+    .search-bar{
+        display: none;
+    }
+
+    
+.header{
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    padding: 2rem 2rem 5px 2rem;
+}
+
+}
+
+@media screen and (max-width: 650px) {
+    
+    .header{
+        max-width: 100%;
+        height: auto;
+        margin-top: 1.5rem;
+        padding: 2rem 0.5rem 5px 0.5rem;
+    }
+
+    
+    
+
+}
+

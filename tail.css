@@ -1,0 +1,118 @@
+.bottom {
+    width: 100%;
+    height: auto;
+    padding: 80px 5rem 10px 5rem;
+    margin-top: 163px;
+    background-color: black;
+    margin-bottom: 5px;
+}
+
+.tail {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 47px;
+    row-gap: 4rem;
+}
+
+.exc, .Support, .account, .quick-line, .download-app {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    list-style: none;
+    row-gap: 24px;
+}
+
+.tail p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.tail div p:first-child a {
+    font-size: 20px;
+}
+
+.subscribe {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.email-edit input {
+    padding: 12px 72px 12px 16px;
+    width: 217px;
+    background-color: black;
+    border: none;
+}
+
+.email-edit {
+    display: flex;
+    border: 1px solid white;
+}
+
+.email-edit img {
+    margin-right: 13px;
+}
+
+.download-app {
+    color: rgba(115, 113, 113, 0.5);
+}
+
+.downloads, .socials {
+    display: flex;
+    column-gap: 10px;
+}
+
+.socials {
+    column-gap: 2rem;
+}
+
+.store {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.1);
+    margin-top: 60px;
+    padding-top: 16px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .tail {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .bottom {
+        width: 100%;
+        height: auto;
+        padding: 80px 2rem 10px 2rem;
+    }
+}
+@media screen and (max-width: 850px) {
+    .tail {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 750px) {
+    .tail {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .bottom {
+        width: 100%;
+        height: auto;
+        padding: 80px 0.5rem 10px 0.5rem;
+    }
+
+
+    
+}

@@ -1,0 +1,374 @@
+.cart-details{
+    width: 100%;
+    height: auto;
+    padding: 80px 5rem 2rem 5rem;
+    margin-top: 5rem;
+}
+
+.home-cart a{
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.cart-total-grid{
+    width: 100%;
+    height: auto;
+}
+
+.first-row,.product-row{
+    background-color: #ffffff;
+    display: grid;
+    padding: 20px 24px;
+    grid-template-columns: repeat(5,1fr);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom:40px;
+    align-items: center;
+    
+    border-radius: 4px;
+}
+.quantity-input{
+    display: flex;
+   justify-content: center;
+}
+.input{
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+ 
+.quan-inp{
+    width: fit-content;
+    display: flex;
+    border-radius: 4px;
+    padding: 6px 12px;
+    border: 1.5px solid rgba(0, 0, 0, 0.5);
+    column-gap: 1rem;
+}
+.increment-decrement{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-input input{
+    width: 30px;
+    border: none;
+    text-align: center;
+    outline: none;
+    background: none;
+}
+.product-and-image{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.product-img{
+    width: 54px;
+    margin-right: 20px;
+    height: 54px;
+}
+
+.product-img img{
+    width: 54px ;
+    height: 54px;
+}
+
+.price-col{
+    display: flex;
+    justify-content: center;
+}
+
+.subtotal-col{
+    display: flex;
+    justify-content:  center;
+    
+}
+.quantity{
+    display: flex;
+    justify-content:  center;
+}
+.return-or-update{
+    width:100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.return-button,.update-button{
+    transition: 1s;
+    padding: 16px 48px;
+    background-color: white;
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    
+}
+
+.return:hover .return-button{
+    background-color:#DB4444;
+    color: #ffffff;
+    border:none;
+
+}
+
+.update:hover .update-button{
+    background-color:#DB4444;
+    color: #ffffff;
+    border:none;
+
+}
+.coupon-and-cart-total{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.coupon-input{
+    width: 48%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.coupon-input input{
+    padding: 16px 130px 16px 24px;
+    border: 1.5px solid rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+}
+
+.coupon-input button{
+    padding: 16px 40px;
+    border: none;
+    background-color: #DB4444;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.coupon-apply:hover .apply-coupon{
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: white;
+    color: black
+}
+
+.cart-total{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    border: 1.5px solid rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    padding: 24px 32px;
+}
+
+.cart-head{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.up,.down{
+    cursor: pointer;
+}
+
+.invoice{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.invoice div{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1.4px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.checkout{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.checkout button{
+    padding: 16px 48px;
+    color: #ffffff;
+    background-color: #DB4444;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 1s;
+}
+.checkout:hover .checkout-button{
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: white;
+    color: black
+}
+
+.style-delete{
+    padding: 16px 48px;
+    color: #000;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+}
+
+.delete:hover .style-delete{
+  
+        background-color: #DB4444;
+        color: #ffffff;
+        border: none
+    
+}
+
+.style-close{
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+    .cart-details{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+  
+}
+
+@media screen and (max-width:1000px){
+
+    .coupon-and-cart-total{
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .cart-total{
+        width: 100%;
+    }
+
+    .coupon-input {
+        width: 100%;
+    }
+    .style-close{
+        display: block;
+    }
+
+    .style-delete{
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width:768px){
+
+    .coupon-and-cart-total{
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .cart-total{
+        width: 100%;
+    }
+
+    .coupon-input {
+        width: 100%;
+    }
+    
+    .product-img{
+        display: none;
+    }
+
+    .style-name,.price-col,.input,.subtotal-col,.quantity,.pro{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width:650px){
+    .cart-details{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+  
+    .product-img{
+        display: none;
+    }
+
+  
+}
+
+@media screen and (max-width:650px){
+.coupon-input{
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: start;
+    align-items: start;
+}
+.return-or-update{
+    margin-bottom: 30px;
+}
+
+}
+
+@media screen and (max-width:450px){
+    .return-or-update{
+        flex-direction: column;
+        row-gap: 1rem;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .increment-decrement{
+        display: none;
+    }
+    .quan-inp{
+        padding: 6px 6px;
+    }
+    .style-name,.price-col,.input,.subtotal-col,.quantity,.pro{
+        font-size: 12px;
+    }
+
+    .style-name{
+        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 50px;
+      
+    }
+
+    .style-close {
+        width: 14px;
+        height: 24px;
+    }
+
+    .style-close svg{
+        width: 100%;
+        height: 100%;
+    }
+}

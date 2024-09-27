@@ -2,7 +2,12 @@ import { itemPrice, discountDisplay,color,colorColored,colorDisplay, remove  } f
 import { cart } from './cart.js';
 export let wishlist=JSON.parse(localStorage.getItem('wishlist'))? JSON.parse(localStorage.getItem('wishlist')) : []; 
 import {hamburgerDisplay,harmburgerClose,myAccountDropdownDisplay,myAccountInnerDropdownDisplay,categoryInnerDropdownDisplay} from "./landing-page.js";
+import { addToWishlistVerify,pageLoadWishlistDisplay,cartCheck,renderColor } from "./general.js";
 
+
+
+document.querySelector('.js-wishlist').innerHTML = wishlist.length;
+document.querySelector('.js-cart').innerText = cart.length;
 
 
 
@@ -86,7 +91,7 @@ export function renderWishlistPage(){
         localStorage.setItem('productCategory',JSON.stringify(product.children[0].innerHTML))
         
     }); 
-});
+    });
     function matchId(id){
         for(let i=0; i<=products.length; i++){
                 const product = products[i]
@@ -129,11 +134,12 @@ export function renderWishlistPage(){
                 wishlistCode += `
                         <div class="item-and-description">
                             <div class="item">
-                                <div class="item-img">
+                                
+                                <div class="item-img" data-product-id="${product.id}">
                                     <img src="images/Product/${product.name}/${availableColors[0]}/${product.image[availableColors[0]][0]}" alt="">
-                                </div>
+                                 </div>
                                 <div class="add-to-cart">
-                                    <button><img src="./images/icons/Cart2.svg" alt="">Add to Cart</button>
+                                    <button class="js-add-cart-${product.id}" data-product-id=${product.id}><img src="./images/icons/Cart2.svg" alt="">Add to Cart</button>
                                 </div>
                             </div>
                 
@@ -181,12 +187,12 @@ export function renderWishlistPage(){
             const availableColors = Object.keys(product.image);
             wishlistCode += `
                     <div class="item-and-description">
-                        <div class="item">
+                        <div class="item"  data-product-id="${product.id}">
                             <div class="item-img">
                                 <img src="images/Product/${product.name}/${availableColors[0]}/${product.image[availableColors[0]][0]}" alt="">
                             </div>
                             <div class="add-to-cart">
-                                <button><img src="./images/icons/Cart2.svg" alt="">Add to Cart</button>
+                                    <button class="js-add-cart-${product.id}" data-product-id=${product.id}><img src="./images/icons/Cart2.svg" alt="">Add to Cart</button>
                             </div>
                         </div>
             
@@ -259,6 +265,9 @@ export function renderWishlistPage(){
     myAccountDropdownDisplay();
     myAccountInnerDropdownDisplay();
     categoryInnerDropdownDisplay();
+    renderColor();
+    pageLoadWishlistDisplay();
+    addToWishlistVerify();
 }
 
 export function moveToCart(){

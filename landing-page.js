@@ -318,10 +318,5 @@ document.querySelectorAll('.item').forEach(element=>{
         
 });
 
-
-
-
-
-
 }
 

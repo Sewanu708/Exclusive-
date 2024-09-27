@@ -12,7 +12,7 @@ jsProducts.forEach((product) => {
     product.addEventListener('click', () => {
 
         localStorage.setItem('productCategory',JSON.stringify(product.children[0].innerHTML))
-        console.log('kk')
+        
     }); 
 });
 

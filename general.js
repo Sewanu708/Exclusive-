@@ -4,7 +4,7 @@ import { products} from "./data/products.js";
 import { cart } from './cart.js';
 
 export function renderLandingPage(){
-    document.querySelector('.js-wishlist').innerHTML = wishlist.length;
+document.querySelector('.js-wishlist').innerHTML = wishlist.length;
 document.querySelector('.js-cart').innerText = cart.length;
 
 

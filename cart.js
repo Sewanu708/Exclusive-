@@ -5,8 +5,6 @@ export let cart=JSON.parse(localStorage.getItem('cart'))? JSON.parse(localStorag
 import {hamburgerDisplay,harmburgerClose,myAccountDropdownDisplay,myAccountInnerDropdownDisplay,categoryInnerDropdownDisplay} from "./landing-page.js";
 
 
-
-
 export function cartDisplay(){
     document.querySelector('.js-cart').innerText = cart.length;
     let cartCode="";
@@ -47,7 +45,7 @@ export function cartDisplay(){
                         <div class="delete">
                             <button class="js-delete style-delete"> Delete </button>
 
-                            <div class="js-delete  style-close"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></div>
+                            <div class="js-delete2  style-close"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></div>
                         </div>
                     </div>`
     
@@ -96,6 +94,13 @@ export function cartDisplay(){
                     localStorage.setItem('cart',JSON.stringify(cart))
                     cartDisplay()
                 })
+                product.querySelector('.js-delete2').addEventListener('click',()=>{
+                
+                    cart = remove(cart,productId);
+                   
+                    localStorage.setItem('cart',JSON.stringify(cart))
+                    cartDisplay()
+                })
                 total += (price * quantity)
             })
             
@@ -121,7 +126,7 @@ export function cartDisplay(){
     }); 
     });
 
-    hamburgerDisplay();
+hamburgerDisplay();
 harmburgerClose();
 myAccountDropdownDisplay();
 myAccountInnerDropdownDisplay();

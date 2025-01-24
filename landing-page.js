@@ -203,7 +203,7 @@ myAccountInnerDropdownDisplay();
 categoryInnerDropdownDisplay();
 categoriesSlider();
 discountDisplay(products);  
-countDownRender(dayjs('2024-10-02T00:00:00'),'category-time');
+countDownRender(dayjs('2025-10-02T00:00:00'),'category-time');
 backToTop();
 
 let productHTML='';
@@ -212,7 +212,7 @@ products.forEach((product)=>{
     const avilableColors=Object.keys(product.image)
 
     
-    countDownRender(dayjs('2024-10-02T00:00:00'),'time')
+    countDownRender(dayjs('2025-10-02T00:00:00'),'time')
         
         const productCode = `
         <div class="item-and-description">
